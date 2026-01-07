@@ -1,0 +1,115 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gra-bg {
+  background-color: white;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+}
+
+.gradient-border {
+  /* background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%); */
+  padding: 2px;
+  border-radius: 1rem;
+}
+
+.gradient-border-inner {
+  background: white;
+  border-radius: calc(1rem - 2px);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.sector-card {
+  transition: transform 0.3s ease;
+}
+
+.sector-card:hover {
+  transform: rotate(0deg) !important;
+}
+
+/* Decorative curve */
+.decorative-curve {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Wavy lines */
+.wavy-section {
+  position: relative;
+}
+
+.wavy-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(37, 99, 235, 0.2),
+    transparent
+  );
+  transform: translateY(-50%);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.horlin {
+  width: 84.5%;
+  margin: auto;
+  height: 1px;
+  background-color: black;
+}
+
+.horlin2 {
+  /* width: 99%; */
+  margin: auto;
+  height: 2.2px;
+  background-color: black;
+}
