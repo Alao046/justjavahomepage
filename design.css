@@ -1,3 +1,4 @@
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -137,6 +138,7 @@ body {
   transition: opacity 0.2s ease, transform 0.2s ease;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
   z-index: 10;
+  border: none;
 }
 
 .editable-container:hover .edit-icon {
@@ -158,13 +160,82 @@ body {
   border-radius: 4px;
 }
 
-.editable-text.editing {
-  background-color: white;
-  box-shadow: 0 0 0 2px #2563eb;
-  outline: none;
+/* Quill Editor Styles */
+.quill-wrapper {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.quill-wrapper .ql-toolbar {
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+  border-radius: 8px 8px 0 0;
   padding: 8px;
 }
 
-.editable-text:focus {
-  outline: none;
+.quill-wrapper .ql-container {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.quill-wrapper .ql-editor {
+  min-height: 80px;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.quill-wrapper .ql-editor p {
+  margin: 0;
+}
+
+.quill-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f9fafb;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.quill-save-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.quill-save-btn:hover {
+  opacity: 0.9;
+}
+
+.quill-cancel-btn {
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.quill-cancel-btn:hover {
+  background: #d1d5db;
+}
+
+/* Hide original text when editing */
+.editable-text.editing-quill {
+  display: none;
 }
