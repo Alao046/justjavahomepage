@@ -113,3 +113,58 @@ body {
   height: 2.2px;
   background-color: black;
 }
+
+/* Editable content styles */
+.editable-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.edit-icon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  z-index: 10;
+}
+
+.editable-container:hover .edit-icon {
+  opacity: 1;
+}
+
+.edit-icon:hover {
+  transform: scale(1.1);
+}
+
+.edit-icon svg {
+  width: 14px;
+  height: 14px;
+  color: white;
+}
+
+.editable-text {
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 4px;
+}
+
+.editable-text.editing {
+  background-color: white;
+  box-shadow: 0 0 0 2px #2563eb;
+  outline: none;
+  padding: 8px;
+}
+
+.editable-text:focus {
+  outline: none;
+}
