@@ -49,13 +49,17 @@
       };
     </script>
     
-    
-
+   
   </head>
   <body
     style="background-color: #eef2f7 !important"
     class="text-gray-900 antialiased"
   >
+    <!-- Vector Image - Full width, extends under CoreCare -->
+    <div class="vector-container">
+      <img src="vector.png" alt="" />
+    </div>
+
     <!-- Navigation -->
     <nav
       class="w-full py-4 px-6 md:px-12 flex items-center justify-between relative z-50"
@@ -159,7 +163,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative px-6 md:px-12 py-12 overflow-hidden">
+    <section class="relative px-6 md:px-12 py-12 overflow-visible">
       <div
         class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10"
       >
@@ -168,21 +172,22 @@
             <h1
               class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
             >
-              We help <span class="text-gradient">Start-ups</span>
+              We help <span id="word1" class="animated-word fade-in">Start-ups</span>
             </h1>
             <div class="flex items-center gap-3">
               <span class="text-java-blue text-3xl md:text-4xl font-bold"
                 >&lt;/&gt;</span
               >
               <span
-                class="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient"
+                id="word2"
+                class="text-4xl md:text-5xl lg:text-6xl font-bold animated-word fade-in"
                 >Build</span
               >
             </div>
             <h1
               class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
             >
-              better <span class="text-gradient">MVPs</span>
+              better <span id="word3" class="animated-word fade-in">MVPs</span>
             </h1>
             <h1
               class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
@@ -273,7 +278,7 @@
     <!-- Services Bar -->
 
     <!-- CoreCare & DeliveryOS Section -->
-    <section class="relative px-6 md:px-12 py-12 wavy-section">
+    <section class="relative px-6 md:px-12 py-12 wavy-section" style="z-index: 10;">
       <!-- Wavy decorative lines (UNCHANGED) -->
       <div
         class="absolute left-0 right-0 top-1/2 -translate-y-1/2 pointer-events-none overflow-hidden"
@@ -547,9 +552,7 @@
               <span class="text-xs px-2 py-1 rounded-full bg-white/10"
                 >Transaction Safety</span
               >
-              <span class="text-xs px-2 py-1 rounded-full bg-white/10"
-                >99.5%</span
-              >
+              <span class="text-xs px-2 py-1 rounded-full bg-white/10">99.5%</span>
               <span class="text-xs px-2 py-1 rounded-full bg-white/10"
                 >Payment G...</span
               >
@@ -597,15 +600,9 @@
             </div>
             <h3 class="text-2xl font-bold mb-3">Fintech</h3>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs px-2 py-1 rounded-full bg-gray-100"
-                >Auth</span
-              >
-              <span class="text-xs px-2 py-1 rounded-full bg-gray-100"
-                >Uptime</span
-              >
-              <span class="text-xs px-2 py-1 rounded-full bg-gray-100"
-                >Ledgers</span
-              >
+              <span class="text-xs px-2 py-1 rounded-full bg-gray-100">Auth</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-gray-100">Uptime</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-gray-100">Ledgers</span>
             </div>
             <p class="text-sm text-gray-500 mb-4">
               We build stable, secure systems built for scale and compliance.
@@ -649,15 +646,9 @@
             </div>
             <h3 class="text-2xl font-bold mb-3">Saas Founders</h3>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs px-2 py-1 rounded-full bg-white/10"
-                >Data Security</span
-              >
-              <span class="text-xs px-2 py-1 rounded-full bg-white/10"
-                >99.9%</span
-              >
-              <span class="text-xs px-2 py-1 rounded-full bg-white/10"
-                >Patient Records</span
-              >
+              <span class="text-xs px-2 py-1 rounded-full bg-white/10">Data Security</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-white/10">99.9%</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-white/10">Patient Records</span>
             </div>
             <p class="text-sm opacity-90 mb-4">
               Ensuring the integrity and confidentiality of patient data with
@@ -866,7 +857,6 @@
                   alt=""
                   srcset=""
                 />
-                <!-- <span class="text-white font-bold">S</span> -->
               </div>
               <div>
                 <p class="font-semibold">Simon Claw</p>
@@ -986,7 +976,6 @@
                   alt=""
                   srcset=""
                 />
-                <!-- <span class="text-white font-bold">S</span> -->
               </div>
               <div>
                 <p class="font-semibold">Simon Claw</p>
@@ -1106,7 +1095,6 @@
                   alt=""
                   srcset=""
                 />
-                <!-- <span class="text-white font-bold">S</span> -->
               </div>
               <div>
                 <p class="font-semibold">Simon Claw</p>
@@ -1188,71 +1176,30 @@
 
     <!-- Newsletter Section -->
     <section class="px-6 md:px-12 py-12">
-      <div
-        class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-6"
-      >
-        <div>
-          <h3 class="font-semibold text-lg">
-            Stay in the loop. Get product updates,
-          </h3>
-          <p class="text-gray-500">
-            insights, and stories—straight to your inbox
-          </p>
-        </div>
-
-        <div class="flex items-center gap-3 flex-wrap">
-          <div class="relative">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-            >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-              ></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <input
-              style="background-color: #eef2f7 !important"
-              type="email"
-              placeholder="Enter your email"
-              class="pl-12 pr-4 py-3 rounded-full border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-java-blue w-64"
-            />
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-2">Stay in the loop. Get product updates,</h3>
+            <p class="text-gray-500">insights, and stories—straight to your inbox</p>
           </div>
-          <button
-            style="background: linear-gradient(90deg, #255bec 0%, #780aff 100%)"
-            class="text-white px-6 py-3 rounded-full font-medium inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
-          >
-            Subscribe
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
+          <div class="flex gap-4 w-full md:w-auto">
+            <input 
+              type="email" 
+              placeholder="Enter your email"
+              class="flex-1 md:w-80 px-4 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-java-blue"
+            />
+            <button class="gradient-bg text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity">
+              Subscribe
+            </button>
+          </div>
         </div>
       </div>
     </section>
+
     <hr class="horlin" />
 
     <!-- Footer -->
-    <footer class="px-6 md:px-12 py-12 border-t border-gray-100">
+    <footer class="px-6 md:px-12 py-12">
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-5 gap-8 mb-12">
           <div class="md:col-span-2">
@@ -1375,10 +1322,10 @@
         </div>
       </div>
     </footer>
+    
 
     
 
 <script src="script.js"></script>
   </body>
 </html>
-
